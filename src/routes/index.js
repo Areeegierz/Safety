@@ -20,6 +20,11 @@ const App = ({ match }) => {
           exact
           component={asyncComponent(() => import("./Estimate/index"))}
         />
+        <Route
+          path={`${match.url}Setup`}
+          exact
+          component={asyncComponent(() => import("./Setup/index"))}
+        />
       </Switch>
     </div>
   );
